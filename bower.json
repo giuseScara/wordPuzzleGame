@@ -1,0 +1,30 @@
+{
+  "name": "WordPuzzleGame",
+  "description": "Word Puzzle Game",
+  "main": "index.html",
+  "keywords": [
+    "word",
+    "puzzle",
+    "game"
+  ],
+  "authors": [
+    "Giuseppe Scaramuzzino"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/giuseScara/wordPuzzleGame",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.7.0",
+    "requirejs": "2.3.2",
+    "require-css": "0.1.8",
+    "angular": "1.5.8",
+    "angular-route": "1.5.8"
+  }
+}

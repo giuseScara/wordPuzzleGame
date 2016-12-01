@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="World Puzzle Game">
+  <meta name="author" content="Giuseppe Scaramuzzino">
+  <link rel="icon" href="/app/images/favicon.ico">
+
+  <title>World Puzzle Game</title>
+
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../app/styles/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Word Puzzle Game</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Scores</a></li>
+                <li><a href="#">Description</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <ng-view />
+
+        <div class="mastfoot">
+          <div class="inner">
+            <p>Developed by <a href="https://github.com/giuseScara">Giuseppe Scaramuzzino</a>.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="overlay" id="overlayBox">
+    <div></div>
+  </div>
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script data-main="../app/script/app.config.js" src="../bower_components/requirejs/require.js"></script>s
+
+</body>
+
+</html>
