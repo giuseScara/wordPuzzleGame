@@ -38,7 +38,7 @@ define([], function () {
         templateUrl: "../app/view/game/game.html",
         controller: "GameController",
         controllerAs: 'gmCtrl',
-        resolve: resolveController(["../view/game/game.controller"])
+        resolve: resolveController(["../app/view/game/game.controller"])
       })
       .otherwise({
         redirectTo: "/start",

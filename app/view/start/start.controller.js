@@ -1,6 +1,6 @@
 "use strict"
 
-define(['app', 'css!app/view/start/start.style.css', 'angular'], function (app) {
+define(['app', 'css!view/start/start.style.css', 'angular'], function (app) {
 
   app.controller('StartController', StartController);
 
