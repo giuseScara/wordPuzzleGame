@@ -1,15 +1,29 @@
-<div class="row row-word">
+<div class="row row-word" ng-if="!gmCtrl.gameEnded">
   <div class="col-xs-12">
-     <div id="clockdiv">
+    <div id="clockdiv">
       <div>
         <span class="seconds"></span>
       </div>
     </div>
   </div>
   <div class="col-xs-12">
-    <label style="font-size: 50px; margin-bottom: 50px" >{{::gmCtrl.shuffleWord("pizza") | uppercase }}</label>
-    </br>
-    <input type="text" class="form-control input-lg" ng-model="gmCtrl.userWord"/>
+    <label style="font-size: 50px; margin-bottom: 50px">{{gmCtrl.wordShuffled | uppercase }}</label>
+    <br/>
+    <input type="text" class="form-control input-lg" ng-model="gmCtrl.userWord" ng-change="gmCtrl.checkAnwser()" />
   </div>
-  
+</div>
+
+<div class="row row-word" ng-if="gmCtrl.gameEnded">
+  <div class="col-xs-12">
+    <div id="clockdiv">
+      <div>
+        Your total score: 120
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <p class="lead">
+      <a href="#/game/{{stCtrl.username}}" class="btn btn-lg btn-success" ng-disabled="stCtrl.isDisabled()">Retry</a>
+    </p>
+  </div>
 </div>
