@@ -11,7 +11,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
 
   function GameController(scope, routeParams, service) {
     var usename = routeParams["username"];
-    var wordsList = service.getWordsList();
+    var wordsList = null;
     var indexWord = 0;
     var oldWord = "";
     var vm = this;
@@ -21,8 +21,8 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
     vm.userWord = "";
     vm.totalScore = 0;
     vm.gameEnded = false;
-    vm.wordToGuess = wordsList[indexWord].word;
-    vm.wordShuffled = shuffleWord(vm.wordToGuess);
+    vm.wordToGuess = null;
+    vm.wordShuffled = null;
 
     vm.checkAnwser = function () {
       if (vm.userWord.trim().toLowerCase() === vm.wordToGuess.trim().toLowerCase()) {
@@ -47,6 +47,14 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
       vm.gameEnded = true;
       scope.$apply();
     }; //timerFinished
+
+    service.getWordsList(function (data) {
+      wordsList = data;
+      vm.wordToGuess = wordsList[indexWord].word;
+      vm.wordShuffled = shuffleWord(vm.wordToGuess);
+      scope.$apply();
+
+    });
 
     function shuffleWord(word) {
       var wordShuffled = word.split('').sort(function () {
