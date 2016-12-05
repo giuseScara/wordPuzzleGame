@@ -17,6 +17,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
     var vm = this;
     vm.countdown = 40;
     vm.wordsList = wordsList;
+    vm.wordScoreToGuess = 0;
     vm.username = usename;
     vm.userWord = "";
     vm.totalScore = 0;
@@ -30,6 +31,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
         indexWord++;
         if (indexWord < wordsList.length) {
           vm.wordToGuess = wordsList[indexWord].word;
+          vm.wordScoreToGuess = wordsList[indexWord].score;
           vm.wordShuffled = shuffleWord(vm.wordToGuess);
           vm.userWord = "";
         } else {
@@ -38,6 +40,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
       } else if (vm.userWord.length < oldWord.length) {
         if (wordsList[indexWord].score > 0) {
           wordsList[indexWord].score--;
+          vm.wordScoreToGuess--;
         }
       }
       oldWord = vm.userWord;
@@ -51,6 +54,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
     service.getWordsList(function (data) {
       wordsList = data;
       vm.wordToGuess = wordsList[indexWord].word;
+      vm.wordScoreToGuess = wordsList[indexWord].score;
       vm.wordShuffled = shuffleWord(vm.wordToGuess);
       scope.$apply();
 

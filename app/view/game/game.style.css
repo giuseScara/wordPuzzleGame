@@ -11,6 +11,10 @@
   padding: 52px;
 }
 
+.word-score {
+  font-size: 18px;
+}
+
 h1 {
   font-weight: 100;
   font-size: 40px;
@@ -29,6 +33,23 @@ h1 {
 
 #clockdiv > div {
   padding: 1px;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+}
+
+#total-score {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 21px;
+}
+
+#total-score > div {
+  padding: 30px;
   border-radius: 3px;
   border: 1px solid;
   display: inline-block;

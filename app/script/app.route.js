@@ -29,16 +29,16 @@ define([], function () {
 
     $routeProvider
       .when("/start", {
-        templateUrl: "../app/view/start/start.html",
+        templateUrl: "view/start/start.html",
         controller: "StartController",
         controllerAs: 'stCtrl',
-        resolve: resolveController(["../app/view/start/start.controller"])
+        resolve: resolveController(["view/start/start.controller"])
       })
       .when("/game/:username", {
-        templateUrl: "../app/view/game/game.html",
+        templateUrl: "view/game/game.html",
         controller: "GameController",
         controllerAs: 'gmCtrl',
-        resolve: resolveController(["../app/view/game/game.controller"])
+        resolve: resolveController(["view/game/game.controller"])
       })
       .otherwise({
         redirectTo: "/start",
