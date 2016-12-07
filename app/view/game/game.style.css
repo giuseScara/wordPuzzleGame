@@ -5,20 +5,8 @@
   background-color: rgba(238, 238, 238, 0.68)
 }
 
-.row-word {
-  border-radius: 21px;
-  background-color: rgba(238, 238, 238, 0.28);
-  padding: 52px;
-}
-
 .word-score {
   font-size: 18px;
-}
-
-h1 {
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
 }
 
 #clockdiv {

@@ -37,6 +37,7 @@ require.config({
     'humanize-duration': pathExtLibs + 'humanize-duration/humanize-duration',
     'app': 'script/app',
     'app.route': 'script/app.route',
+    'data.access.service': 'script/service/data.access.service'
   },
 
   // kick start application

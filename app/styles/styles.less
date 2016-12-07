@@ -3,24 +3,39 @@
   border-radius: 50%;
   border-top: 16px solid #3498db;
   border-bottom: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-    position: absolute;
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  top: 30%;
+  left: 46%;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+.row-word {
+  border-radius: 21px;
+  background-color: rgba(238, 238, 238, 0.28);
+  padding: 52px;
+}
+
 .overlay {
   background-color: white;
   z-index: 9999;

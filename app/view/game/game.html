@@ -1,17 +1,25 @@
 <div class="row row-word" ng-if="!gmCtrl.gameEnded">
   <div class="col-xs-12">
-    <div class="pull-left">
-      <span class="word-score">Total score: {{gmCtrl.totalScore}}</span>
-    </div>
-    <div id="clockdiv">
-      <div>
-        <span class="seconds">
-          <timer interval="1000" countdown="40" finish-callback="gmCtrl.timerFinished()">{{countdown}}</timer>
-        </span>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="pull-left">
+          <span class="word-score">Total score: {{gmCtrl.totalScore}}</span>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="pull-right">
+          <span class="word-score">Word score: {{gmCtrl.wordScoreToGuess}}</span>
+        </div>
       </div>
     </div>
-    <div class="pull-right">
-      <span class="word-score">Word score: {{gmCtrl.wordScoreToGuess}}</span>
+    <div class="col-xs-12">
+      <div id="clockdiv">
+        <div>
+          <span class="seconds">
+          <timer interval="1000" countdown="40" finish-callback="gmCtrl.timerFinished()">{{countdown}}</timer>
+        </span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-xs-12">
@@ -30,7 +38,7 @@
   </div>
   <div class="col-xs-12">
     <p class="lead">
-      <a href="#/game/{{gmCtrl.username}}" class="btn btn-lg btn-success" ng-disabled="stCtrl.isDisabled()">Retry</a>
+      <button ng-click="gmCtrl.restart()" class="btn btn-lg btn-success">Retry</button>
     </p>
   </div>
 </div>

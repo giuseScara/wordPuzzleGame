@@ -40,6 +40,15 @@ define([], function () {
         controllerAs: 'gmCtrl',
         resolve: resolveController(["view/game/game.controller"])
       })
+      .when("/description", {
+        templateUrl: "view/description/description.html",
+      })
+      .when("/scores", {
+        templateUrl: "view/scores/scores.html",
+        controller: "ScoresController",
+        controllerAs: 'srCtrl',
+        resolve: resolveController(["view/scores/scores.controller"])
+      })
       .otherwise({
         redirectTo: "/start",
       })
