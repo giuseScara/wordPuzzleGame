@@ -8,6 +8,7 @@ Game runs for 40 seconds, during which the user can solve as many words as he ca
 Frameworks and Tools:
 - AngularJS
 - Boostrap
+- RequireJS
 - Font awesome
 - Gulp
 - Bower
