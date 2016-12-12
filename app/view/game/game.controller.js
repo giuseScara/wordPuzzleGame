@@ -53,10 +53,6 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
       scope.$apply();
     }; //timerFinished
 
-    vm.restart = function () {
-      startGame();
-    }; // restart
-
     function startGame() {
       angular.element(".overlay").show();
 
@@ -78,7 +74,7 @@ define(['app', 'view/game/game.service', 'css!view/game/game.style.css', 'angula
       }).join('');
 
       if (wordShuffled == word) shuffleWord(word);
-      return wordShuffled;
+      else return wordShuffled;
     }; //shuffleWord
 
   }; //GameController

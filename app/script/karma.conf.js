@@ -17,11 +17,11 @@ module.exports = function (config) {
     files: [
       'test-main.js',
       {
-        pattern: '../../node_modules/angular-mocks/*.js',
+        pattern: 'ext_libs/angular-mocks/*.js',
         included: false
       },
       {
-        pattern: '../../bower_components/jquery/dist/jquery.min.js',
+        pattern: 'ext_libs/jquery.min/jquery.min.js',
         included: false
       },
       {
@@ -33,11 +33,7 @@ module.exports = function (config) {
         included: false
       },
       {
-        pattern: '../components/**/*.js',
-        included: false
-      },
-      {
-        pattern: '../../bower_components/require-css/css.min.js',
+        pattern: 'ext_libs/css.min/css.min.js',
         included: false
       },
       {
@@ -47,11 +43,7 @@ module.exports = function (config) {
       {
         pattern: '../view/**/*.css',
         included: false
-      },
-      {
-        pattern: '../components/**/*.css',
-        included: false
-      },
+      }
     ],
 
 

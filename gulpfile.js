@@ -1,16 +1,5 @@
 var gulp = require('gulp'),
-  minifycss = require('gulp-minify-css'),
-  jshint = require('gulp-jshint'),
-  stylish = require('jshint-stylish'),
-  uglify = require('gulp-uglify'),
-  usemin = require('gulp-usemin'),
-  imagemin = require('gulp-imagemin'),
   rename = require('gulp-rename'),
-  concat = require('gulp-concat'),
-  notify = require('gulp-notify'),
-  cache = require('gulp-cache'),
-  changed = require('gulp-changed'),
-  rev = require('gulp-rev'),
   browserSync = require('browser-sync'),
   del = require('del'),
   bower = require("gulp-bower");
@@ -31,11 +20,6 @@ gulp.task('less', function () {
     }));
 });
 
-gulp.task('jshint', function () {
-  return gulp.src(['app/scripts/**/*.js', 'app/view/**/*.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-});
 
 // Clean
 gulp.task('clean', function () {
@@ -48,6 +32,7 @@ gulp.task('lib_js', function () {
   var libs = [
     pathExtLib + 'angular/angular.min.js',
     pathExtLib + 'angular-route/angular-route.min.js',
+    pathExtLib + 'angular-mocks/angular-mocks.js',
     pathExtLib + 'jquery/dist/jquery.min.js',
     pathExtLib + 'requirejs/require.js',
     pathExtLib + 'angular-timer/dist/angular-timer.min',
@@ -83,7 +68,7 @@ gulp.task('lib_css', function () {
 
 // Default task
 gulp.task('default', ['clean', 'bower'], function () {
-  gulp.start('jshint', 'lib_js', 'lib_css');
+  gulp.start('lib_js', 'lib_css');
 });
 
 

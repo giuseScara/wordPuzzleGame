@@ -1,6 +1,6 @@
 var allTestFiles = [
 ];
-var pathExtLibs = "../bower_components/";
+var pathExtLibs = "ext_libs/";
 var TEST_REGEXP = /(spec|test)\.js$/i
 
 // Get a list of all the test files to include
@@ -18,7 +18,7 @@ require.config({
   baseUrl: ".",
   map: {
     '*': {
-      'css': pathExtLibs + 'require-css/css.min'
+      'css': pathExtLibs + 'css.min/css.min'
     }
   },
 
@@ -34,13 +34,13 @@ require.config({
   paths: {
     'angular': [
       'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min',
-      pathExtLibs + 'angular/angular.min'
+      pathExtLibs + 'angular.min/angular.min'
     ],
     'jquery': [
-      pathExtLibs + 'jquery/dist/jquery.min'
+      pathExtLibs + 'jquery.min/jquery.min'
     ],
     'app': '../app/script/app.mocks',
-    'angular-mocks': '../node_modules/angular-mocks/angular-mocks'
+    'angular-mocks': pathExtLibs + '/angular-mocks/angular-mocks'
   },
 
   // kick start application
