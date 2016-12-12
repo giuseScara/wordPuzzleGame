@@ -28,5 +28,5 @@ Open terminal:
  gulp <br>
  http-server -p 1234 or npm install http-server -g (with Administrator permission) http-server -p 1234<br>
  cd  app
+ Open Url http://127.0.0.1:1234
 </pre>
-Open Url http://127.0.0.1:1234
