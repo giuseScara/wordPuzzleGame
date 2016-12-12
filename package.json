@@ -11,6 +11,7 @@
     "gulp": "3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-rename": "1.2.2",
+    "http-server": "^0.9.0",
     "jasmine": "^2.5.2",
     "jasmine-core": "2.5.2",
     "jshint": "2.9.4",
